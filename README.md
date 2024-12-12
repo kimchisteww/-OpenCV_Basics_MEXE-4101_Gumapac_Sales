@@ -1,1 +1,1 @@
-# -OPenCV_Basics_Section_Gumapac_Sales
+# -OpenCV_Basics_Section_Gumapac_Sales
