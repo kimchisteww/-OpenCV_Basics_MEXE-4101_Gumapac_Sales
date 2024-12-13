@@ -169,8 +169,12 @@ The objective of this activity is to develop a contactless biometric fingerprint
    
 
 7. Developing the Contactless Fingerprint Scan
-   1. The following flowchart was designed to integrate the algorithms to know 
-
+   1. The following flowchart was designed to integrate the algorithms
+      ![Contactless Edge Detection drawio](https://github.com/user-attachments/assets/696a7e2c-1deb-4f87-8a3d-3a659875baf0)
+   2. Integrating it into code using VSCode
+      ![image](https://github.com/user-attachments/assets/448138b6-4630-4561-aad1-5b4e76ede8a7)
+   3. Initial Functional Testing
+      
 8. Evaluating the Scanned Images Qualitatively
 
 # Conclusion
