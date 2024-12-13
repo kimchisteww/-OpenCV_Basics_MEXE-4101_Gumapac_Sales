@@ -3,10 +3,24 @@ Contactless biometric fingerprint technology is one where a person can be identi
 
 
 # Abstract
-•Develop a contactless biometric fingerprint capture system using advanced imaging techniques.
 
-•Conduct Edge Detection Analysis: Perform functionality tests on a contactless fingerprint scanning system to evaluate the effectiveness of edge detection algorithms across various fingers.
+The objective of this activity is to develop a contactless biometric fingerprint. Specifically, it aims to design the algorithm on which the contactless biometric fingerprint is working involved. Next, to develop using programming methods in Python, RoboFlow, and Pytorch for the contactless biometric fingerprint scanning. Lastly, to compare the fingerprints saved through qualitative methods. The Framework used in this activity is RoboFlow using YOLOv8 Model, a Deep Learning Framework to assist developers to develop real-time computer vision projects. The Scope of this project will focus on scanning and saving the fingerprint involved. The activity will not cover the recognizing the fingerprints needed involved.
 
-•Test Multiple Finger Types: Capture and analyze fingerprint images from different fingers (e.g., index, middle, ring, and pinky) of various individuals to assess the system's ability to detect edges consistently.
 
-•Significant limitation of the current camera technology is its lack of autofocus capability.
+# Project Methods
+
+1. Using a suitable dataset for identifying the finger involved
+
+2. Training a model using RoboFlow to identify the finger involved
+
+3. Extracting the model to develop the Contactless Fingerprint Scan
+
+4. Developing the Contactless Fingerprint Scan
+
+5. Evaluating the Scanned Images Qualitatively
+
+# Conclusion
+
+The summary shows the images of the tests and the improved borders using Sobel Operator Edge Detection.
+
+
