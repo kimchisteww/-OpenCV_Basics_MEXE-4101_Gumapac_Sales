@@ -11,9 +11,9 @@ The objective of this activity is to develop a contactless biometric fingerprint
 # Project Methods
 
 1. Using a suitable dataset for identifying the finger involved
-   1. Using ![RoboFlow FingerTip Only](https://universe.roboflow.com/uidaibiomatch/finger_detect_tip_only), we used the dataset needed to identify the images
+   1. Using [RoboFlow FingerTip Only](https://universe.roboflow.com/uidaibiomatch/finger_detect_tip_only), we used the dataset needed to identify the images
       ![image](https://github.com/user-attachments/assets/4eb77421-ff50-4dc2-a458-fca7289bd761)
-   2. Then after that we transfer the dataset to our ![Google Colab](https://colab.research.google.com/drive/1BT1rFbg-JpeUtq_igNJlOsYNbEsjlKFU#scrollTo=AKVTDpk9nj2R) to train the model
+   2. Then after that we transfer the dataset to our [Google Colab](https://colab.research.google.com/drive/1BT1rFbg-JpeUtq_igNJlOsYNbEsjlKFU#scrollTo=AKVTDpk9nj2R) to train the model
 3. Training a model using RoboFlow to identify the finger involved
    1. Stated on the code, we first install ultralytics, roboflow, and download the dataset.
    2. We Train the model using YOLOv8m.pt Model under 20 Epochs in a 640 Image Size
@@ -148,11 +148,27 @@ The objective of this activity is to develop a contactless biometric fingerprint
     Samples of the Valid Predicted Dataset:
     ![image](https://github.com/user-attachments/assets/0f23ba64-7492-4246-ba52-e75ea60c6a59)
 
+5. Extracting the model to develop the Contactless Fingerprint Scan
+   1. Downloading the best.pt dataset and input on the selected python program
+      ![chrome_O0aeVgLSgm](https://github.com/user-attachments/assets/8aaddd18-9df6-414b-b9cc-b4b515850511)
+
+   2. Testing the Trained Model
+      Using this code
+      ```
+      from ultralytics import YOLO
+
+      model = YOLO('FingerDetect.pt')
+      
+      results = model(source=1, show=True, conf=0.4, save=True)
+      
+      ```
+      We can have a live feedback of the finger detection.
+
+      ![python3 11_H8KDFUwHlx](https://github.com/user-attachments/assets/64c490ff-97cf-48d1-af07-5444c318fa39)
+
    
 
-5. Extracting the model to develop the Contactless Fingerprint Scan
-
-6. Developing the Contactless Fingerprint Scan
+7. Developing the Contactless Fingerprint Scan
    1. The following flowchart was designed to integrate the algorithms to know 
 
 8. Evaluating the Scanned Images Qualitatively
