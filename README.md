@@ -5,7 +5,7 @@ Contactless biometric fingerprint technology is one where a person can be identi
 
 # Abstract
 
-The objective of this activity is to develop a contactless biometric fingerprint. Specifically, it aims to design the algorithm on which the contactless biometric fingerprint is working involved. Next, to develop using programming methods in Python, RoboFlow, and Pytorch for the contactless biometric fingerprint scanning. Lastly, to compare the fingerprints saved through qualitative methods. The Framework used in this activity is RoboFlow using YOLOv8 Model, a Deep Learning Framework to assist developers to develop real-time computer vision projects. The Scope of this project will focus on scanning and saving the fingerprint involved. The activity will not cover the recognizing the fingerprints needed involved.
+The objective of this activity is to develop a contactless biometric fingerprint. Specifically, it aims to design the algorithm on which the contactless biometric fingerprint is working involved. Next, to develop using programming methods in Python, RoboFlow, and Pytorch for the contactless biometric fingerprint scanning. Lastly, to compare the fingerprints saved through qualitative methods if there any differences between the images. The Framework used in this activity is RoboFlow using YOLOv8 Model, a Deep Learning Framework to assist developers to develop real-time computer vision projects. The Scope of this project will focus on scanning and saving the fingerprint involved. The activity will not cover the recognizing the fingerprints needed involved.
 
 
 # Project Methods
@@ -176,9 +176,60 @@ The objective of this activity is to develop a contactless biometric fingerprint
    3. Initial Functional Testing
       
 8. Evaluating the Scanned Images Qualitatively
+   1. Since we are focusing on the Edge Detection whether it will improve the fingerprint scan comparison of both tests will be used using Histogram Comparison
+   ```
+   import cv2
+   
+   def compare_histograms(imageA, imageB, method='correlation'):
+       # Convert images to HSV color space for better comparison
+       imageA = cv2.cvtColor(imageA, cv2.COLOR_BGR2HSV)
+       imageB = cv2.cvtColor(imageB, cv2.COLOR_BGR2HSV)
 
+    # Calculate histograms
+    histA = cv2.calcHist([imageA], [0, 1], None, [50, 60], [0, 180, 0, 256])
+    histB = cv2.calcHist([imageB], [0, 1], None, [50, 60], [0, 180, 0, 256])
+
+    # Normalize histograms
+    cv2.normalize(histA, histA, alpha=0, beta=1, norm_type=cv2.NORM_MINMAX)
+    cv2.normalize(histB, histB, alpha=0, beta=1, norm_type=cv2.NORM_MINMAX)
+
+    # Use correlation or other methods
+    methods = {
+        'correlation': cv2.HISTCMP_CORREL,
+        'chi-square': cv2.HISTCMP_CHISQR,
+        'bhattacharyya': cv2.HISTCMP_BHATTACHARYYA
+    }
+
+    comparison = cv2.compareHist(histA, histB, methods[method])
+    return comparison
+
+      # Load images
+      imageA = cv2.imread('image1.webp')
+      imageB = cv2.imread('image2.webp')
+      
+      # Compare histograms using correlation
+      hist_score = compare_histograms(imageA, imageB, method='correlation')
+      print(f"Histogram Comparison Score (Correlation): {hist_score}")
+   ```
+
+   
 # Conclusion
 
 The summary shows the images of the tests and the improved borders using Sobel Operator Edge Detection.
+
+| Description | Non-Sobel Fingerprint| Sobel Fingerprint | Histogram Comparison Score | Remarks | 
+| --- | --- | --- | --- | --- |
+| Left Index Finger | ![Fingerprint_1_20241213_231255](https://github.com/user-attachments/assets/a6250b7b-8f26-468a-ae76-87dc7e3854e8) | ![Fingerprint_Improved_Borders_1_20241213_231255](https://github.com/user-attachments/assets/c5bd228f-5f65-4ffd-886c-26b953c6bb80)| 1.0 | No Difference|
+| Left Middle FInger | ![Fingerprint_1_20241213_231258](https://github.com/user-attachments/assets/a2e37154-a737-4b0e-9d74-d23a7b66c2bd) | ![Fingerprint_Improved_Borders_1_20241213_231258](https://github.com/user-attachments/assets/6e071555-0f1f-4d0c-b5e5-4247d4276356) | 1.0 | No Difference |
+| Left Ring Finger | ![Fingerprint_1_20241213_231306](https://github.com/user-attachments/assets/b2c353e6-8cbc-4b64-aaf9-edb097534552) | ![Fingerprint_Improved_Borders_1_20241213_231306](https://github.com/user-attachments/assets/b266db48-b98b-4de7-b6c0-e7b4b464b892) | 1.0 | No Difference|
+| Left Thumb | ![Fingerprint_1_20241213_231326](https://github.com/user-attachments/assets/3b8a2902-ad75-4502-804d-ff81fadbea08) | ![Fingerprint_Improved_Borders_1_20241213_231326](https://github.com/user-attachments/assets/3a18d2ba-e9c5-4d1b-9904-1f0323a91549) | 1.0 | No Difference| 
+
+It seems that there are no differences betweeen the pictures indicated in the said picture. But if we look closely, there are blurry finger edges which makes it bolder, which is the aim of the study.
+
+The collaborators improve the setup by having the GUI Platform created upon it, Having a high Quality Camera, and bring Camera Features related to the project
+
+
+
+
 
 
