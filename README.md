@@ -3,10 +3,10 @@ Contactless biometric fingerprint technology is one where a person can be identi
 
 
 # Abstract
--Develop a contactless biometric fingerprint capture system using advanced imaging techniques.
+•Develop a contactless biometric fingerprint capture system using advanced imaging techniques.
 
--Conduct Edge Detection Analysis: Perform functionality tests on a contactless fingerprint scanning system to evaluate the effectiveness of edge detection algorithms across various fingers.
+•Conduct Edge Detection Analysis: Perform functionality tests on a contactless fingerprint scanning system to evaluate the effectiveness of edge detection algorithms across various fingers.
 
--Test Multiple Finger Types: Capture and analyze fingerprint images from different fingers (e.g., index, middle, ring, and pinky) of various individuals to assess the system's ability to detect edges consistently.
+•Test Multiple Finger Types: Capture and analyze fingerprint images from different fingers (e.g., index, middle, ring, and pinky) of various individuals to assess the system's ability to detect edges consistently.
 
--Significant limitation of the current camera technology is its lack of autofocus capability.
+•Significant limitation of the current camera technology is its lack of autofocus capability.
