@@ -1,3 +1,8 @@
+
+# Video Preview
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/bmGZIhOFr8Q/0.jpg)](https://www.youtube.com/watch?v=bmGZIhOFr8Q)
+
 # Introduction
 Contactless biometric fingerprint technology is one where a person can be identified and authenticated without physical contact with a scanning device. It has become essential in machine vision because it is efficient, secure, and easy to use. Frictionless contactless biometrics are more user-friendly. It allows users to authenticate their identity without the discomfort or hygiene concerns associated with touching shared surfaces.
 
