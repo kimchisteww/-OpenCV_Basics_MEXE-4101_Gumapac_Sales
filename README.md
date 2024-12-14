@@ -10,7 +10,7 @@ Contactless biometric fingerprint technology is one where a person can be identi
 
 # Abstract
 
-The objective of this activity is to develop a contactless biometric fingerprint. Specifically, it aims to design the algorithm on which the contactless biometric fingerprint is working involved. Next, to develop using programming methods in Python, RoboFlow, and Pytorch for the contactless biometric fingerprint scanning. Lastly, to compare the fingerprints saved through qualitative methods if there any differences between the images. The Framework used in this activity is RoboFlow using YOLOv8 Model, a Deep Learning Framework to assist developers to develop real-time computer vision projects. The Scope of this project will focus on scanning and saving the fingerprint involved. The activity will not cover the recognizing the fingerprints needed involved.
+The objective of this activity is to develop a contactless biometric fingerprint. Specifically, it aims to design the algorithm on which the contactless biometric fingerprint is working involved. Next, to develop using programming methods in Python, RoboFlow, and Pytorch for the contactless biometric fingerprint scanning. Lastly, to compare the fingerprints  of the non edge detected and edge detected saved through Histogram Comparison and qualitative methods if there any differences between the images. The Framework used in this activity is RoboFlow using YOLOv8 Model, a Deep Learning Framework to assist developers to develop real-time computer vision projects. The Scope of this project will focus on scanning and saving the fingerprint involved. The activity will not cover the recognizing the fingerprints needed involved.
 
 
 # Project Methods
